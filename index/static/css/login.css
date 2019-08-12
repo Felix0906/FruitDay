@@ -1,0 +1,104 @@
+body,h2,p{
+    margin: 0;
+}
+#container{
+    width: 990px;
+    margin: 0 auto;
+}
+#container h2{
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 20px;
+}
+.left{
+    float: left;
+    position: relative;
+}
+.left>a{
+    box-sizing: border-box;
+    position: absolute;
+    text-decoration: none;
+    color: #64a131;
+    border: 1px solid #64a131;
+    border-radius: 5px;
+    width: 153px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    bottom: 20px;
+    left: 173px;
+}
+
+.right{
+    float: right;
+    margin-top: 70px;
+    margin-right: 40px;
+}
+.form-line{
+    margin-top: 20px;
+    height: 40px;
+    color: #999;
+}
+.form-line>p{
+    float: left;
+    color: #999;
+    width: 64px;
+    height: 40px;
+    text-align: right;
+    line-height: 40px;
+    margin-right: 40px;
+}
+.form-line>input, .form-line>div{
+    float: right;
+    width: 300px;
+}
+.form-control{
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    border:1px solid #ccc;
+    padding: 0 12px;
+    outline: none;
+    font-size: 16px;
+    color: #555;
+}
+.forget{
+    float: right;
+}
+.forget a{
+    color: #999;
+}
+.isSaved{
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+}
+.isSaved a{
+    color: #999;
+}
+.loginBtn, .registerBtn{
+    box-sizing: border-box;
+    width: 145px;
+    height: 38px;
+    border: 1px solid #64a131;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.registerBtn{
+    float: right;
+    text-decoration: none;
+    color: #64a131;
+}
+.loginBtn{
+    background-color: #64a131;
+    color: #fff;
+    outline: none;
+}
+
+
+
+

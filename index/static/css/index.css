@@ -1,0 +1,198 @@
+#container{
+    width:990px;
+    margin:0 auto;
+}
+#nav{
+    height: 30px;
+    background-color: #eee;
+    line-height: 30px;
+}
+#nav .rightNav{
+    float: right;
+}
+#nav .rightNav>li{
+    float: left;
+    padding: 0 5px;
+  }
+#nav .rightNav>li>b{
+    border-left: 1px solid #9A9A9A;
+    margin-right: 10px;
+}
+#nav .leftNav>li{
+    float:left;
+    padding: 0 5px;
+}
+#nav .leftNav>li>u{
+    /*行内元素转换为行内块元素，使其可设置宽高属性*/
+    display: inline-block;
+    width: 0;
+    height: 0;
+    /*transport：设置透明色*/
+    border: 6px solid transparent;
+    border-top: 6px solid black;
+    /*相对定位：相对于元素在文档中原来的位置进行偏移*/
+    position: relative;
+    top: 5px;
+}
+#nav .leftNav .address .select{
+    display: none;
+    /*显示后列表占位，设置绝对定位脱离文档流
+    注意:是在hover之前的状态加定位*/
+    position: absolute;
+    /*在某些浏览器显示时，下拉列表会被其他元素覆盖
+    ，所以要调整堆叠次序，保证其正常显示*/
+    z-index: 100;
+    color: black;
+}
+/*通过选择器找到能点击的元素，
+hover后面是对应的要动作元素*/
+#nav .leftNav .address:hover .select{
+    display: block;
+    background-color: #64a131;
+    opacity: 0.5;
+    cursor: pointer;
+
+}
+#nav .leftNav .address .select>li:hover{
+    font-weight: bolder;
+    color: red;
+}
+/*父相子绝，
+下拉列表绝对定位后会相对其最近已定位的祖先元素进行位置偏移
+所以将其父元素设置为相对定位最好，虽然设置绝对定位在显示效果上没什么影响
+但使用绝对定位脱离文档流有可能会造成其他元素显示不正常*/
+#nav .leftNav .address{
+    position: relative;
+}
+
+#cart{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+}
+#banner{
+    margin: 15px 0;
+    position: relative;
+}
+#banner img{
+    width: 100%;
+    height: 207px;
+}
+#banner .imgNav{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+#banner .imgNav>li{
+    float: left;
+    margin: 0 10px;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+}
+#banner .imgNav>li:first-child{
+    background-color: red;
+}
+#banner .imgNav>li>a{
+    color: #fff;
+}
+
+/*设置除第一张外，其他图片都隐藏*/
+#banner a:not(:first-child){
+    display: none;
+}
+#banner .imgNav{
+    position: absolute;
+}
+
+#adv{
+    /*子元素全部浮动不占位，高度为0，*/
+    height: 112px;
+}
+#adv img{
+    width: 240px;
+    margin-right: 10px;
+    /*正常设置图片宽和边距后四张图片应该可以一行显示，*/
+    /*但由于行内块元素在html中书写如果换行的话，*/
+    /*会默认元素之间有一定的边距，所以需要定位来辅助显示*/
+    float: left;
+}
+#adv .lastAdv{
+    margin-right: 0;
+}
+#main{
+    margin-top: 25px;
+    /*用于清除浮动带来高度为0的问题*/
+    /*overflow: hidden;*/
+
+}
+#main .item .goodsClass{
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+#main .item .goodsClass>a{
+    /*原本共行的元素，浮动后还是共行，如果原本不共行会换行*/
+    float: right;
+    color: #333;
+}
+#main .item>ul>li{
+    width: 190px;
+    margin-right: 10px;
+    float: left;
+}
+#main .item>ul>li.no-margin{
+    margin-right: 0;
+}
+#main .item>ul>li>p>img{
+    width: 190px;
+    /*调整过渡效果*/
+    transition: all .3s;
+}
+
+#main .item>ul>li>p>img:hover{
+    /*商品展示鼠标移入放大效果*/
+    transform: scale(1.1);
+}
+/*给商品图片加一个p元素用来限制溢出隐藏*/
+#main .item>ul>li>p{
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+}
+#main .content{
+    margin-top: 5px;
+}
+#main .content>a{
+    float: right;
+}
+#main .content>p{
+    color:#555;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+#main .content>span{
+    margin-left: 5px;
+  }
+/*此时底部如果添加内容则会在主体内容区域下方显示，*/
+/*这是由于主体内容都浮动造成高度为零的原因*/
+/*解决此浮动后高度问题的方法：*/
+/*1.设置主体属性:overflow:hidden;*/
+/*2.在主体内容最后增加标签<div>/<p>并设置属性：clear:both;*/
+/*#footer{*/
+/*    height: 200px;*/
+/*    background-color: #64a131;*/
+/*    text-align: center;*/
+/*    line-height: 200px;*/
+/*}*/
+/*#footer>span{*/
+/*    color: black;*/
+/*    font-size: 50px;*/
+/*}*/
+#footer img{
+    width: 990px;
+    height: 207px;
+}

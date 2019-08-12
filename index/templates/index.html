@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}" type="text/css">
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <title>天天果园 - 主页</title>
+</head>
+<body>
+    <div id='container'>
+        <div id="nav">
+            <ul class="rightNav">
+                <li id='login'>
+                    <a href="/login">[Login]</a>
+                    ，
+                    <a href="/register">[Register Now]</a>
+                </li>
+                <li>
+                    <b></b>
+                    <a>Announcement</a>
+                </li>
+                <li>
+                    <b></b>
+                    <a>Card</a>
+                </li>
+                <li>
+                    <b></b>
+                    <a>Mobile</a>
+                </li>
+            </ul>
+            <ol class="leftNav">
+                <li class="address">
+                    <span class='current'>Shanghai</span>
+                    <u></u>
+                    <ul class="select">
+                        <li>Shanghai</li>
+                        <li>Guangzhou</li>
+                        <li>Shenzhen</li>
+                    </ul>
+                </li>
+                <li>满百包邮(环郊内)</li>
+                <li>星夜达</li>
+            </ol>
+            </div>
+            <div id="cart">
+{#                <a href="/cart/">My Cart(0)</a>#}
+            </div>
+            <div id="banner">
+                <div class="wrapper">
+                </div>
+                <ul class="imgNav">
+                </ul>
+            </div>
+            <div id="adv">
+                </ul>
+            </div>
+            <div id="main"></div>
+            <div id="footer">
+                <img src="{% static 'images/banner1.jpg' %}">
+            </div>
+        </div>
+</body>
+</html>
+
+
+

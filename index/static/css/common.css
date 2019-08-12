@@ -1,0 +1,21 @@
+body{
+    font: 14px "Microsoft Sans Serif", '黑体', sans-serif;
+    color: #9A9A9A;
+}
+div,p,ul,ol,h1,h2,h3,h4,h5,h6{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+a{
+    color:#9A9A9A;
+    text-decoration:none;
+}
+a:hover{
+    color:#64a131;
+}
+img{
+    vertical-align: bottom;
+}
+
+

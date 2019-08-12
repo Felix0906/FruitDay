@@ -1,0 +1,55 @@
+{% extends 'login.html' %}
+{% load static %}
+{% block title %}
+    <title>天天果园 - 注册</title>
+{% endblock %}
+{% block head %}
+    <script src="{% static 'js/register.js'%}"></script>
+{% endblock %}
+{% block h2%}
+    <h2>用户注册</h2>
+{% endblock %}
+{% block register %}
+     <a href="/login">会员登录&gt;</a>
+{% endblock %}
+
+{% block form %}
+    <div class="right" style="margin-top: 35px">
+        <form action="/register/" method="POST" id="form">
+            {% csrf_token %}
+            <div class="form-line">
+                <p>手机号码</p>
+                <input id="phone" type="text" name="phone" class="form-control" placeholder="必填">
+            </div>
+            <p id="phone-tip" style="float: right;font-size: 10px;"></p>
+            <div class="form-line">
+                <p>用户密码</p>
+                <input id="pwd" type="password" name="pwd" class="form-control" placeholder="请输入6-20位密码">
+            </div>
+            <p id="pwd-tip" style="float: right;font-size: 10px;"></p>
+            <div class="form-line">
+                <p>确认密码</p>
+                <input id="pwd2" type="password" name="confirm-pwd" class="form-control" placeholder="请输入6-20位密码">
+            </div>
+            <p id="confirm-tip" style="float: right;font-size: 10px;"></p>
+            <div class="form-line">
+                <p>昵称</p>
+                <input id="name" type="text" name="name" class="form-control" placeholder="选填">
+            </div>
+            <div class="form-line">
+                <p>邮箱</p>
+                <input id="email" type="email" name="email" class="form-control"  placeholder="必填">
+            </div>
+            <p id="email-tip" style="float: right;font-size: 10px;"></p>
+            <div class="form-line">
+                <p></p>
+                <div>
+                    <input type="submit" name="login" value="注册" class="loginBtn">
+                    <a href="/login/" class="registerBtn">会员登录</a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
